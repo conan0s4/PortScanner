@@ -6,7 +6,6 @@ public class portRange {
     
     
     
-    
     // Optional: scan a range of ports
     public static void tcpRange(String target, int startPort, int endPort) {
         System.out.println("Scanning " + target + " from port " + startPort + " to " + endPort + "...");
