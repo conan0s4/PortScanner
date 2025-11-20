@@ -1,0 +1,5 @@
+com\mycompany\portscanner\ScanTime.class
+com\mycompany\portscanner\UdpScanner.class
+com\mycompany\portscanner\PortScanner.class
+com\mycompany\portscanner\portRange.class
+com\mycompany\portscanner\TcpScanner.class
