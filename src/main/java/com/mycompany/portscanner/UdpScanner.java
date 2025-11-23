@@ -18,7 +18,7 @@ public class UdpScanner {
         this.port = port;
     }
 
-    public String scanPort() {
+    public String scanPort2() {
         try (DatagramSocket socket = new DatagramSocket()) {
             socket.setSoTimeout(timeout);
 

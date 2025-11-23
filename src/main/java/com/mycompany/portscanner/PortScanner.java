@@ -32,8 +32,6 @@ public class PortScanner implements Runnable {
     @Override
     public void run() {
         
-        
-        
             // If no args. given then prompt user
     if (!tcpMode && !udpMode && port == null && address == null) {
                 System.out.println("""
@@ -57,23 +55,23 @@ public class PortScanner implements Runnable {
     //if -s arg. has no value then return
      //if -s arg. has value then
     //validatestore into var
-    if (address == null){return;}else if (address != null) {String addr = address;}
-    //if -p arg.  has value then
-    //store into var                     //if no -p arg. then scan all ports
-    if (port != null){int p = port;}else { boolean scanall = true;}    
-     
+    if (address == null){System.out.println("input (portscanner) for help."); return;}
 
-       //if either tcp/udp hasn't been specified then  use the defualt scanner which is tcp
+    ServiceDetector detector = new ServiceDetector();
+       //if either tcp/udp hasn't been specified then (not tcp/udp then set tcpmode to true)
     if (!tcpMode && !udpMode){
         tcpMode = true;
-    }
+    } //ones set to true we then proceed to checking if either tcp or dup is true and here its set already to tru so 
+    //it then proceeds to if (tcpMode)
     
-    else if (tcpMode) {
+    if (tcpMode) {
     if (port != null) { //if port is specified : use value inputted by the user 
         TcpScanner scanner1 = new TcpScanner(address, port);
-        if (scanner1.scanPort()) { //if port is scanned then prompt user
+        if (scanner1.scanPort1()) { //if port is scanned then prompt user
             System.out.println("address: " + address);
             System.out.println("Port " + port + " is OPEN");
+            String service = detector.identifyService(address, port);
+            System.out.println("Service: " + service);
         } else {  //if close still prompt user
             System.out.println("address: " + address);
             System.out.println("Port " + port + " is CLOSED");
@@ -93,7 +91,7 @@ public class PortScanner implements Runnable {
     else if (udpMode) {
             if (port != null) { // if port args has value then      
         UdpScanner scanner2 = new UdpScanner(address, port);
-        String result = scanner2.scanPort();
+        String result = scanner2.scanPort2();
 
         System.out.println("address: " + address);
 
@@ -143,6 +141,8 @@ public class PortScanner implements Runnable {
 
 //---------------> scanner commands function gets called in the main class
         new CommandLine(new PortScanner()).execute(args);
+  
+    
 
     }
 }

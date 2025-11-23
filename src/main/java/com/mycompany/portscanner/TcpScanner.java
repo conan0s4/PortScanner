@@ -15,7 +15,7 @@ public class TcpScanner {
         this.port = port;
     }
 
-    public boolean scanPort() {
+    public boolean scanPort1() {
         try (Socket socket = new Socket()) {
             socket.connect(new InetSocketAddress(target, port), timeout);
             return true; // Port is open
