@@ -114,18 +114,7 @@ public class PortScanner implements Runnable {
         
     }
         
-
-                
-
-                
-
-                
-
-        
-        
-
-    
-        
+ 
         
     }
     
