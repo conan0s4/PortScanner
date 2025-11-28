@@ -1,13 +1,6 @@
 # PortScanner
 <h2>Port Scanner Tool</h2>
 
-<p>
-  A lightweight CLI port scanner built in Java using Picocli. Supports both TCP and UDP scanning,
-  designed for local network testing and learning purposes.
-  Includes TCP banner grabbing to identify running services by reading their initial response.
-  A custom singly linked list data structure is used for service detection and port result handling.
-</p>
-
 <h3>Features</h3>
 <ul>
   <li><strong>TCP Scan Mode:</strong> Attempts a full connection to check port status and grab banners.</li>
