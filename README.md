@@ -1,5 +1,15 @@
+<div align="center">
+
 # PortScanner
-<h2>Port Scanner Tool</h2>
+
+### TCP & UDP Network Reconnaissance Tool
+
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+![Networking](https://img.shields.io/badge/Networking-2D9CDB?style=for-the-badge)
+![CLI](https://img.shields.io/badge/CLI-111111?style=for-the-badge)
+![Security](https://img.shields.io/badge/Security-FF4D4D?style=for-the-badge)
+
+</div>
 
 <h3>Features</h3>
 <ul>
